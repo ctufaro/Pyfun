@@ -1,17 +1,24 @@
-"""This module does blah blah."""
+def super_reduced_string(s):
+    retstr = ''
+    ltrDic = {}
+    visited = {}
+    if s == '':
+        return 'Empty String'
+    for l in s:
+        if l not in ltrDic:
+            ltrDic[l] = 1
+        else:
+            ltrDic[l] = ltrDic[l] + 1
+    for l in s:
+        if l not in visited:
+            if ltrDic[l]%2!=0:
+                retstr = retstr + l
+                visited[l] = True
+    if retstr == '':
+        return 'Empty String'
+    return retstr
 
-kevin = 0
-stuart = 0
-word = 'BANANA'
-vowels = ['A', 'E', 'I', 'O', 'U']
+print(super_reduced_string('aaabccddd'))
+    
 
-for i in range(len(word)):
-    if word[i] in vowels:
-        stuart += len(word) - i
-    else:
-        kevin += len(word) - i
-
-print (stuart)
-print (kevin)
-
-
+    

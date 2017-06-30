@@ -38,3 +38,6 @@ regressor.fit(x_train, y_train)
 
 #Predicting the test set results
 y_pred = regressor.predict(x_test)
+
+#Building backward elimination
+import statsmodels.formula api as sm

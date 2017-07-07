@@ -43,7 +43,6 @@ def preorder_ite(root):
                 stack.append(root.right)
             if root.left!=None:
                 stack.append(root.left)
-
         else:
             break
 
